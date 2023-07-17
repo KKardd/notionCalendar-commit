@@ -1,15 +1,4 @@
-const core = require("@actions/core");
-const github = require("@actions/github");
-
-try {
-    // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput("who-to-greet");
-    console.log(`Hello ${nameToGreet}!`);
-    const time = new Date().toTimeString();
-    core.setOutput("time", time);
-    // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2);
-    console.log(`The event payload: ${payload}`);
-} catch (error) {
-    core.setFailed(error.message);
-}
+// JavaScript 파일 (file.js)
+const commitMessage = process.argv[2];
+console.log("Commit Message:", commitMessage);
+// 여기에서 원하는 작업을 수행하세요.
