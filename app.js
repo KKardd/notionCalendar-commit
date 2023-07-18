@@ -26,6 +26,7 @@ async function addItem(text) {
                 Date: {
                     date: {
                         start: date.toISOString(),
+                        end: date.toISOString(),
                         time_zone: "Asia/Seoul",
                     },
                 },
