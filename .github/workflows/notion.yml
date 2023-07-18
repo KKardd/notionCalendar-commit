@@ -15,4 +15,4 @@ jobs:
               run: npm install
 
             - name: Run JavaScript
-              run: npm start "${{ github.event.head_commit.message }}" ${{ secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}}
+              run: npm start "${{github.event.head_commit.message }}" ${{secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}}
