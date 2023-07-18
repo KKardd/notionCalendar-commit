@@ -12,4 +12,4 @@ jobs:
               uses: actions/checkout@v2
 
             - name: Run JavaScript
-              run: npm start "${{ github.event.head_commit.message }}"
+              run: npm start "${{ github.event.head_commit.message }}" ${{ secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}}
