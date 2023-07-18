@@ -6,6 +6,8 @@ const {Client} = require("@notionhq/client");
 
 const notion = new Client({auth: notionKey});
 
+const date = new Date();
+date.setHours(date.getHours() + 9);
 async function addItem(text) {
     try {
         const response = await notion.pages.create({
@@ -20,9 +22,14 @@ async function addItem(text) {
                         },
                     ],
                 },
+                Date: {
+                    date: {
+                        start: date.toISOString(),
+                        time_zone: "Asia/Seoul",
+                    },
+                },
             },
         });
-        console.log(response);
         console.log("Success! Entry added.");
     } catch (error) {
         console.error(error.body);
