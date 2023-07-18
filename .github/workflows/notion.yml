@@ -11,5 +11,8 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v2
 
+            - name: module install
+              run: npm install
+
             - name: Run JavaScript
               run: npm start "${{ github.event.head_commit.message }}" ${{ secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}}
