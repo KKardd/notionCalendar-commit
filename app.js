@@ -87,7 +87,7 @@ const commitMessage = process.argv[2];
 const notionKey = process.argv[3];
 const databaseID = process.argv[4];
 
-import {Client} from "@notionhq/client";
+const {Client} = require("@notionhq/client");
 
 const notion = new Client({auth: notionKey});
 
