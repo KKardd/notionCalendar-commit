@@ -6,9 +6,9 @@ const {Client} = require("@notionhq/client");
 
 const notion = new Client({auth: notionKey});
 
-const date = new Date();
-date.setHours(date.getHours() + 9);
-
+const date = new Date(); // 현재 시간 설정
+date.setHours(date.getHours() + 9); // 한국 시간으로 수정
+const today = date.toISOString().slice(0, 10); // 날짜 정보만 가져오기
 async function addItem(text) {
     try {
         const response = await notion.pages.create({
@@ -25,8 +25,7 @@ async function addItem(text) {
                 },
                 Date: {
                     date: {
-                        start: date.toISOString().slice(0, 10),
-                        time_zone: "Asia/Seoul",
+                        start: today,
                     },
                 },
             },
