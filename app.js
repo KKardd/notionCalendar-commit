@@ -50,8 +50,8 @@ const {Client} = require("@notionhq/client");
 
 const notion = new Client({auth: notionKey});
 
-const date = new Date();
-date.setHours(date.getHours() + 9);
+// const date = new Date();
+// date.setHours(date.getHours() + 9);
 async function addItem(text) {
     try {
         const response = await notion.pages.create({
