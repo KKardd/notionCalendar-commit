@@ -1,9 +1,8 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Insert Commit Message To Notion Datebase
+run-name: ${{ github.actor }} 가 실행중입니다.🚀
 on:
-    push:
-        branches:
-            - main
+    schedule:
+        - cron: "0 1 * * *"
 jobs:
     Explore-GitHub-Actions:
         runs-on: ubuntu-latest
@@ -15,4 +14,4 @@ jobs:
               run: npm install
 
             - name: Run JavaScript
-              run: npm start "${{github.event.head_commit.message }}" ${{secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}}
+              run: npm start ${{secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}}
