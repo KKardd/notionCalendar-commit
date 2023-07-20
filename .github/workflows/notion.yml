@@ -1,8 +1,8 @@
 name: Insert Commit Message To Notion Datebase
 run-name: ${{ github.actor }} 가 실행중입니다.🚀
 on:
-    push:
-        branches: [main]
+    schedule:
+        - cron: "0 1 * * *"
 jobs:
     Explore-GitHub-Actions:
         runs-on: ubuntu-latest
