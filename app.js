@@ -1,5 +1,5 @@
-// const notionKey = process.argv[2];
-// const databaseID = process.argv[3];
+const notionKey = process.argv[2];
+const databaseID = process.argv[3];
 
 const {Client} = require("@notionhq/client");
 const axios = require("axios");
