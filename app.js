@@ -7,11 +7,11 @@ const axios = require("axios");
 const now = new Date();
 const yesterday = new Date(now);
 yesterday.setDate(yesterday.getDate() - 1);
-yesterday.setHours(0, 0, 0, 0); // 어제 0시 0분 0초 세팅
+yesterday.setHours(15, 0, 0, 0); // 어제 15시 0분 0초 세팅
 const since = yesterday.toISOString();
 
 const yesterdayEnd = new Date(yesterday);
-yesterdayEnd.setHours(23, 59, 59, 999); // 어제 23시 59분 59초 세팅
+yesterdayEnd.setHours(14, 59, 59, 999); // 어제 14시 59분 59초 세팅
 const until = yesterdayEnd.toISOString();
 
 console.log("since:" + since + "until:" + until);
