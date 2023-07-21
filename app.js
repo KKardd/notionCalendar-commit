@@ -10,14 +10,15 @@ yesterday.setDate(yesterday.getDate() - 1);
 yesterday.setHours(15, 0, 0, 0); // 어제 15시 0분 0초 세팅
 const since = yesterday.toISOString();
 
-const yesterdayEnd = new Date(yesterday);
+const yesterdayEnd = new Date(now);
+// yesterdayEnd.setDate(yesterdayEnd.getDate() - 1);
 yesterdayEnd.setHours(14, 59, 59, 999); // 어제 14시 59분 59초 세팅
 const until = yesterdayEnd.toISOString();
 
 console.log("since:" + since + "until:" + until);
 
 const username = "KKardd";
-const token = "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";
+const token = "token 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";
 
 const repositoryList = [];
 const commitList = [];
@@ -121,7 +122,6 @@ async function insertCommitMessage(text, today) {
                 },
             },
         });
-        console.log(response);
         console.log("Success! Entry added.");
     } catch (error) {
         console.error(error.body);
@@ -144,3 +144,6 @@ async function main() {
 }
 
 main();
+setTimeout(() => {
+    console.log(commitList);
+}, 5000);
