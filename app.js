@@ -1,23 +1,19 @@
 const notionKey = process.argv[2];
 const databaseID = process.argv[3];
 const token = process.argv[4];
-console.log(token);
 
 const {Client} = require("@notionhq/client");
 const axios = require("axios");
 
 const now = new Date();
-const yesterday = new Date(now);
-yesterday.setDate(yesterday.getDate() - 1);
-yesterday.setHours(15, 0, 0, 0); // 어제 15시 0분 0초 세팅
-const since = yesterday.toISOString();
+const startPoint = new Date(now);
+startPoint.setDate(startPoint.getDate() - 1);
+startPoint.setHours(15, 0, 0, 0); // 어제 15시 0분 0초 세팅
+const since = startPoint.toISOString();
 
-const yesterdayEnd = new Date(now);
-// yesterdayEnd.setDate(yesterdayEnd.getDate() - 1);
-yesterdayEnd.setHours(14, 59, 59, 999); // 어제 14시 59분 59초 세팅
-const until = yesterdayEnd.toISOString();
-
-console.log("since:" + since + "until:" + until);
+const endPoint = new Date(now);
+endPoint.setHours(14, 59, 59, 999); // 오늘 14시 59분 59초 세팅
+const until = endPoint.toISOString();
 
 const username = "KKardd";
 
@@ -136,7 +132,6 @@ async function main() {
         await getCommit(repo);
     }
     const date = new Date(); // 현재 시간 설정
-    date.setHours(date.getHours() - 24); // 한국 시간으로 수정
     const today = date.toISOString().slice(0, 10); // 날짜 정보만 가져오기
 
     for (const commitMessage of commitList) {
@@ -145,6 +140,3 @@ async function main() {
 }
 
 main();
-setTimeout(() => {
-    console.log(commitList);
-}, 5000);
