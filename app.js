@@ -8,12 +8,13 @@ const now = new Date();
 const yesterday = new Date(now);
 yesterday.setDate(yesterday.getDate() - 1);
 yesterday.setHours(0, 0, 0, 0); // 어제 0시 0분 0초 세팅
-const yesterdayEnd = new Date(now);
-yesterdayEnd.setDate(yesterdayEnd.getDate() - 1);
-yesterdayEnd.setHours(23, 59, 59, 999); // 어제 23시 59분 59초 세팅
-
 const since = yesterday.toISOString();
+
+const yesterdayEnd = new Date(yesterday);
+yesterdayEnd.setHours(23, 59, 59, 999); // 어제 23시 59분 59초 세팅
 const until = yesterdayEnd.toISOString();
+
+console.log("since:" + since + "until:" + until);
 
 const username = "KKardd";
 const token = "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";
@@ -89,7 +90,7 @@ async function getCommit(repoName) {
         const commit = response.data;
         for (const commits of commit) {
             if (commits.author.login === username) {
-                commitList.push(String(commits.commit.message));
+                commitList.push("[" + String(repoName) + "]" + String(commits.commit.message));
             }
         }
         return response.data;
