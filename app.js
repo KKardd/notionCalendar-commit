@@ -1,5 +1,6 @@
 const notionKey = process.argv[2];
 const databaseID = process.argv[3];
+const token = process.argv[4];
 
 const {Client} = require("@notionhq/client");
 const axios = require("axios");
@@ -18,7 +19,6 @@ const until = yesterdayEnd.toISOString();
 console.log("since:" + since + "until:" + until);
 
 const username = "KKardd";
-const token = "token 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";
 
 const repositoryList = [];
 const commitList = [];

@@ -2,7 +2,7 @@ name: Insert Commit Message To Notion Datebase
 run-name: ${{ github.actor }} 가 실행중입니다.🚀
 on:
     schedule:
-        - cron: "0 18 * * *"
+        - cron: "30 18 * * *"
 jobs:
     Explore-GitHub-Actions:
         runs-on: ubuntu-latest
@@ -14,4 +14,4 @@ jobs:
               run: npm install
 
             - name: Run JavaScript
-              run: npm start ${{secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}}
+              run: npm start ${{secrets.NOTION_KEY}} ${{secrets.NOTION_DATABASE_ID}} ${{secrets.API_TOKEN}}
