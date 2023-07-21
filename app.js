@@ -1,6 +1,7 @@
 const notionKey = process.argv[2];
 const databaseID = process.argv[3];
 const token = process.argv[4];
+console.log(token);
 
 const {Client} = require("@notionhq/client");
 const axios = require("axios");
@@ -28,7 +29,7 @@ async function getUserOrganizations() {
     try {
         const response = await axios.get(`https://api.github.com/users/${username}/orgs`, {
             headers: {
-                Authorization: token,
+                Authorization: "token " + token,
             },
         });
         return response.data;
@@ -45,7 +46,7 @@ async function getOrganizationToRepositories() {
             const orgName = org.login;
             const response = await axios.get(`https://api.github.com/orgs/${orgName}/repos`, {
                 headers: {
-                    Authorization: token,
+                    Authorization: "token " + token,
                 },
             });
             const repositories = response.data;
@@ -64,7 +65,7 @@ async function getRepositories() {
     try {
         const response = await axios.get(`https://api.github.com/users/${username}/repos`, {
             headers: {
-                Authorization: token,
+                Authorization: "token " + token,
             },
         });
         const repositories = response.data;
@@ -84,7 +85,7 @@ async function getCommit(repoName) {
             `https://api.github.com/repos/${repoName}/commits?since=${since}&until=${until}`,
             {
                 headers: {
-                    Authorization: token,
+                    Authorization: "token " + token,
                 },
             }
         );
