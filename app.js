@@ -1,28 +1,31 @@
 // Github Nickname Setting
 const username = "KKardd";
+// Insert your github nickname
 
 const {Client} = require("@notionhq/client");
 const axios = require("axios");
 
+// Secret key setting
 const notionKey = process.argv[2];
 const databaseID = process.argv[3];
 const token = process.argv[4];
 
+// Time setting(Using github api)
 const now = new Date();
 const startPoint = new Date(now);
 startPoint.setDate(startPoint.getDate() - 1);
-startPoint.setHours(15, 0, 0, 0); // 어제 15시 0분 0초 세팅
+startPoint.setHours(15, 0, 0, 0);
 const since = startPoint.toISOString();
 
 const endPoint = new Date(now);
-endPoint.setHours(14, 59, 59, 999); // 오늘 14시 59분 59초 세팅
-const until = endPoint.toISOString();
+endPoint.setHours(14, 59, 59, 999);
+const until = endPoint.toISOString(); // Time setting based on Korean time (used according to ISO time)
 
 const repositoryList = [];
 const commitList = [];
 
+// Search for my organization
 async function getUserOrganizations() {
-    // 나의 조직들 찾기
     try {
         const response = await axios.get(`https://api.github.com/users/${username}/orgs`, {
             headers: {
@@ -35,8 +38,8 @@ async function getUserOrganizations() {
     }
 }
 
+// Search for my repo in organization
 async function getOrganizationToRepositories() {
-    // 찾은 내 조직들의 Repo 찾기
     try {
         const organizations = await getUserOrganizations();
         for (const org of organizations) {
@@ -57,8 +60,8 @@ async function getOrganizationToRepositories() {
     }
 }
 
+// Search for my repo
 async function getRepositories() {
-    // 개인 레포지토리 찾기
     try {
         const response = await axios.get(`https://api.github.com/users/${username}/repos`, {
             headers: {
@@ -75,8 +78,8 @@ async function getRepositories() {
     }
 }
 
+// Get all commit message
 async function getCommit(repoName) {
-    // 찾은 조직들에서 Repo의 내가 한 커밋 찾기.
     try {
         const response = await axios.get(
             `https://api.github.com/repos/${repoName}/commits?since=${since}&until=${until}`,
@@ -89,7 +92,10 @@ async function getCommit(repoName) {
         const commit = response.data;
         for (const commits of commit) {
             if (commits.author.login === username) {
-                commitList.push("[" + String(repoName) + "]" + String(commits.commit.message));
+                const message = `[${String(repoName)}]${String(commits.commit.message)}`; // [KKardd/notionCalendar-commit]feat: add function
+                commitList.push(message);
+                // Commit message Type(Can be modified as needed)
+                // ex) const message = `[${username}→${String(repoName)}]${String(commits.commit.message)}`; // [KKardd→Nogwari/server]feat: add function
             }
         }
         return response.data;
@@ -98,6 +104,7 @@ async function getCommit(repoName) {
     }
 }
 
+// Insert commit message to notion database
 async function insertCommitMessage(text, today) {
     const notion = new Client({auth: notionKey});
     try {
@@ -132,8 +139,8 @@ async function main() {
     for (const repo of repositoryList) {
         await getCommit(repo);
     }
-    const date = new Date(); // 현재 시간 설정
-    const today = date.toISOString().slice(0, 10); // 날짜 정보만 가져오기
+    const date = new Date(); // Setting notion time
+    const today = date.toISOString().slice(0, 10); // Change the date type(YYYY-MM-DD)
 
     for (const commitMessage of commitList) {
         await insertCommitMessage(commitMessage, today);
