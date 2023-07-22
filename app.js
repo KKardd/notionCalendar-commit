@@ -1,9 +1,12 @@
-const notionKey = process.argv[2];
-const databaseID = process.argv[3];
-const token = process.argv[4];
+// Github Nickname Setting
+const username = "KKardd";
 
 const {Client} = require("@notionhq/client");
 const axios = require("axios");
+
+const notionKey = process.argv[2];
+const databaseID = process.argv[3];
+const token = process.argv[4];
 
 const now = new Date();
 const startPoint = new Date(now);
@@ -14,8 +17,6 @@ const since = startPoint.toISOString();
 const endPoint = new Date(now);
 endPoint.setHours(14, 59, 59, 999); // 오늘 14시 59분 59초 세팅
 const until = endPoint.toISOString();
-
-const username = "KKardd";
 
 const repositoryList = [];
 const commitList = [];
