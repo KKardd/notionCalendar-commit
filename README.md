@@ -1,4 +1,4 @@
-# 🗓️ notionCalendar-commit
+<img width="1439" alt="스크린샷 2023-07-26 오후 1 14 03" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/a5c369f5-5089-4e2d-a81f-eea8d2767b64"># 🗓️ notionCalendar-commit
 
 
 This repository used the notion-calendar functionality. You can personally record your own studies, and furthermore, the team project unit makes it easy for you to check your team members' commit messages and project progress.
@@ -33,6 +33,14 @@ This repository used the notion-calendar functionality. You can personally recor
 
 <img width="481" alt="10 07 02" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/9029f4d4-634f-4dfd-a0e7-596753cefeb3">
 
+(7) Rename date type(It must be set the name **Date**)
+
+![스크린샷 2023-07-27 오후 10 06 11](https://github.com/KKardd/notionCalendar-commit/assets/108740187/4b9f6e90-ac80-4209-8b78-f3ad6e10b927)
+
+![IMG_1293](https://github.com/KKardd/notionCalendar-commit/assets/108740187/6538ba89-27da-4c30-bd52-f09168a7ee29)
+
+
+
 ### 2. Git fork & clone to localspace
 (1) [https://github.com/KKardd/notionCalendar-commit] Follow the image below, click on star and repository git fork
 
@@ -49,7 +57,7 @@ This repository used the notion-calendar functionality. You can personally recor
 <img width="516" alt="11 39 47" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/dcdc5811-58ae-4c45-9636-64997d30d072">
 (Your repository paste)
 
-(4) Init username in app.js
+(4) Init username in app.js(If you are not Korean, you should click [here](https://kkardd.notion.site/Notion-ISO-time-Setting-2011a658388a46268559ef3476b2c582?pvs=4) to set the time.)
 ```
 // Github Nickname Setting
 const username = "YOUR_USERNAME"; 
@@ -60,7 +68,30 @@ const username = "YOUR_USERNAME";
 (1) Enter the Actions tab at the top of the repository and activate the github action under the name "Insert Commit Message To Notion Database" by pressing the enable button.
 
 <img width="1437" alt="1 19 21" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/672b5ed4-869d-40cc-b19f-b77a3d89f157">
-(2) Actions secrets and variables setting
+
+<img width="1439" alt="스크린샷 2023-07-26 오후 1 14 03" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/bebf8654-34ab-4ee1-a2a0-808210030413">
+
+(2) Issuance github api token
+![IMG_92C7B15F6F9E-1](https://github.com/KKardd/notionCalendar-commit/assets/108740187/a14ba98f-82dd-47dc-a2bb-a19036b6f826)
+
+![스크린샷 2023-07-27 오후 10 22 10](https://github.com/KKardd/notionCalendar-commit/assets/108740187/0d3c7127-dc1b-46fc-aa66-b82ad9f21571)
+
+![스크린샷 2023-07-27 오후 10 23 50](https://github.com/KKardd/notionCalendar-commit/assets/108740187/e6d1366d-abaf-438d-8d4b-188123f4eaa6)
+
+![스크린샷 2023-07-27 오후 10 23 59](https://github.com/KKardd/notionCalendar-commit/assets/108740187/a7f25108-ccfe-4cd2-a945-15ae63866fce)
+
+(3) Save your token
+
+![스크린샷 2023-07-27 오후 10 25 40](https://github.com/KKardd/notionCalendar-commit/assets/108740187/2bae2ede-d990-415b-ac81-94f5424f840c)
+
+
+(4) Actions secrets and variables setting(Your repository)
 
 <img width="1170" alt="스크린샷 2023-07-26 오후 1 34 49" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/20e047f5-ee16-4edc-906c-66d0e845cf6c">
+
+![image](https://github.com/KKardd/notionCalendar-commit/assets/108740187/4a5b0006-4764-442f-914a-d53b481431d7)
+
+![image](https://github.com/KKardd/notionCalendar-commit/assets/108740187/069cc9ee-f6fa-49c1-8026-7ffce55472ff)
+
+### The End👏
 
