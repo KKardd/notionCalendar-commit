@@ -89,6 +89,9 @@ const username = "YOUR_USERNAME";
 <img width="1170" alt="스크린샷 2023-07-26 오후 1 34 49" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/20e047f5-ee16-4edc-906c-66d0e845cf6c">
 
 ![image](https://github.com/KKardd/notionCalendar-commit/assets/108740187/4a5b0006-4764-442f-914a-d53b481431d7)
+Insert your secret key(github api token, notion database id, notion api key)
+
+**🧷Note: These names must be set to API_TOKEN, NOTION_DATABASE_ID, NOTION_KEY, respectively.**
 
 ![image](https://github.com/KKardd/notionCalendar-commit/assets/108740187/069cc9ee-f6fa-49c1-8026-7ffce55472ff)
 
