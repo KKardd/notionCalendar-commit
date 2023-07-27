@@ -1,5 +1,4 @@
-<img width="1439" alt="스크린샷 2023-07-26 오후 1 14 03" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/a5c369f5-5089-4e2d-a81f-eea8d2767b64"># 🗓️ notionCalendar-commit
-
+# 🗓️ notionCalendar-commit
 
 This repository used the notion-calendar functionality. You can personally record your own studies, and furthermore, the team project unit makes it easy for you to check your team members' commit messages and project progress.
 
@@ -14,8 +13,8 @@ This repository used the notion-calendar functionality. You can personally recor
 (1) [https://www.notion.so/my-integrations] After connecting, log in
 
 (2) click on **New API Integration** button
-<img width="964" alt="9 49 46" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/50014243-67eb-4212-92dd-27c28fdfb2f5">
 
+<img width="964" alt="9 49 46" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/50014243-67eb-4212-92dd-27c28fdfb2f5">
 
 (3) Select linked workspace → Name setting, Logo (optional) → Submit
 
@@ -27,6 +26,7 @@ This repository used the notion-calendar functionality. You can personally recor
 
 (5) Create new calendar database in notion & **Save Dateabse ID**
 (From the URL part of the calendar, after the part called www.notion.so/ , until the question mark character comes out)
+
 <img width="1368" alt="10 01 11" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/1efa8eb1-53ae-4f24-8342-a508e9854318">
 
 (6) Connection of the notation api ID to the database(In the input box, search for the name you set in the API integration.)
@@ -69,9 +69,9 @@ const username = "YOUR_USERNAME";
 
 <img width="1437" alt="1 19 21" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/672b5ed4-869d-40cc-b19f-b77a3d89f157">
 
-<img width="1439" alt="스크린샷 2023-07-26 오후 1 14 03" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/bebf8654-34ab-4ee1-a2a0-808210030413">
 
 (2) Issuance github api token
+
 ![IMG_92C7B15F6F9E-1](https://github.com/KKardd/notionCalendar-commit/assets/108740187/a14ba98f-82dd-47dc-a2bb-a19036b6f826)
 
 ![스크린샷 2023-07-27 오후 10 22 10](https://github.com/KKardd/notionCalendar-commit/assets/108740187/0d3c7127-dc1b-46fc-aa66-b82ad9f21571)
@@ -83,7 +83,6 @@ const username = "YOUR_USERNAME";
 (3) Save your token
 
 ![스크린샷 2023-07-27 오후 10 25 40](https://github.com/KKardd/notionCalendar-commit/assets/108740187/2bae2ede-d990-415b-ac81-94f5424f840c)
-
 
 (4) Actions secrets and variables setting(Your repository)
 
