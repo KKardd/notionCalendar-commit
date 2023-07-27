@@ -1,5 +1,5 @@
 name: Insert Commit Message To Notion Datebase
-run-name: ${{ github.actor }} 가 실행중입니다.🚀
+run-name: Synchronizing ${{ github.actor }}'s notion calendar🏃💨💨💨
 on:
     schedule:
         - cron: "0 15 * * *"
