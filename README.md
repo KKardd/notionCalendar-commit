@@ -57,10 +57,10 @@ This repository used the notion-calendar functionality. You can personally recor
 <img width="516" alt="11 39 47" src="https://github.com/KKardd/notionCalendar-commit/assets/108740187/dcdc5811-58ae-4c45-9636-64997d30d072">
 (Your repository paste)
 
-(4) Init username in app.js(If you are not Korean, you should click [here](https://kkardd.notion.site/Notion-ISO-time-Setting-2011a658388a46268559ef3476b2c582?pvs=4) to set the time.)
+(4) Init your github username in app.js(If you don't live in Korea, you should click [here](https://kkardd.notion.site/Notion-ISO-time-Setting-2011a658388a46268559ef3476b2c582?pvs=4) to set the time.)
 ```
 // Github Nickname Setting
-const username = "YOUR_USERNAME"; 
+const username = "YOUR_GITHUB_USERNAME"; 
 // Insert your github nickname
 ```
 
