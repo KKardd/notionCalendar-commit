@@ -5,6 +5,7 @@ This repository used the notion-calendar functionality. You can personally recor
 ⚠️CAUTION
 - This is based on an public repository.
 - This set ISO time as a Korean standard. If it is not running in Korea, you should follow the document below and press [here](https://kkardd.notion.site/Notion-ISO-time-Setting-2011a658388a46268559ef3476b2c582?pvs=4) to set up additional settings.
+- If you want to use the Notion Calendar function as a team, not as an individual, please follow what is written in the README below and click [here](https://kkardd.notion.site/Team-Notion-Calendar-Commit-1826586d233f469b8884b5f2c07d06fc?pvs=4) to set it up additionally.
 ---
 
 ## 📄 Guide Document 
@@ -94,8 +95,6 @@ Insert your secret key(github api token, notion database id, notion api key)
 **🧷Note: These names must be set to API_TOKEN, NOTION_DATABASE_ID, NOTION_KEY, respectively.**
 
 ![image](https://github.com/KKardd/notionCalendar-commit/assets/108740187/069cc9ee-f6fa-49c1-8026-7ffce55472ff)
-
-If you want to use the Notion Calendar function as a team, not as an individual, please click [here](https://kkardd.notion.site/Team-Notion-Calendar-Commit-1826586d233f469b8884b5f2c07d06fc?pvs=4) to set it up.
 
 ### The End👏
 
