@@ -92,10 +92,8 @@ async function getCommit(repoName) {
         const commit = response.data;
         for (const commits of commit) {
             if (commits.author.login === username) {
-                if (String(repoName).startsWith("NoGwari")) {
-                    const message = `[${String(repoName)}]${String(commits.commit.message)}`; // [KKardd/notionCalendar-commit]feat: add function
-                    commitList.push(message);
-                }
+                const message = `[${String(repoName)}]${String(commits.commit.message)}`; // [KKardd/notionCalendar-commit]feat: add function
+                commitList.push(message);
                 // Commit message Type(Can be modified as needed)
                 // ex) const message = `[${username}→${String(repoName)}]${String(commits.commit.message)}`; // [KKardd→Nogwari/server]feat: add function
             }
