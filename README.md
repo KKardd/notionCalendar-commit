@@ -95,5 +95,7 @@ Insert your secret key(github api token, notion database id, notion api key)
 
 ![image](https://github.com/KKardd/notionCalendar-commit/assets/108740187/069cc9ee-f6fa-49c1-8026-7ffce55472ff)
 
+If you want to use the Notion Calendar function as a team, not as an individual, please click [here](https://kkardd.notion.site/Team-Notion-Calendar-Commit-1826586d233f469b8884b5f2c07d06fc?pvs=4) to set it up.
+
 ### The End👏
 
