@@ -2,10 +2,11 @@
 
 This repository used the notion-calendar functionality. You can personally record your own studies, and furthermore, the team project unit makes it easy for you to check your team members' commit messages and project progress.
 
-⚠️CAUTION
+**⚠️CAUTION**
 - This is based on an public repository.
 - This set ISO time as a Korean standard. If it is not running in Korea, you should follow the document below and press [here](https://kkardd.notion.site/Notion-ISO-time-Setting-2011a658388a46268559ef3476b2c582?pvs=4) to set up additional settings.
-- If you want to use the Notion Calendar function as a team, not as an individual, please follow what is written in the README below and click [here](https://kkardd.notion.site/Team-Notion-Calendar-Commit-1826586d233f469b8884b5f2c07d06fc?pvs=4) to set it up additionally.
+- To use the Notion Calendar function as a **team**, not as an individual, the administrator should follow the instructions in the user manual below, and the team members should click [here](https://kkardd.notion.site/Team-Notion-Calendar-Commit-1826586d233f469b8884b5f2c07d06fc?pvs=4) to make simple settings
+   * The administrator should keep the database id of the notion calendar and the notion integrated api secret key for the team members.
 ---
 
 ## 📄 Guide Document 
