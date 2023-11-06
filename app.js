@@ -53,7 +53,6 @@ async function getOrganizationToRepositories() {
             repositories.forEach((repo) => {
                 repositoryList.push(String(repo.full_name));
             });
-            return repositories;
         }
     } catch (error) {
         throw new Error(`Failed to fetch organizations for user "${username}": ` + error.message);
@@ -72,7 +71,6 @@ async function getRepositories() {
         repositories.forEach((repo) => {
             repositoryList.push(String(repo.full_name));
         });
-        return repositories;
     } catch (error) {
         throw new Error("Failed to fetch repositories: " + error.message);
     }
@@ -98,7 +96,6 @@ async function getCommit(repoName) {
                 // ex) const message = `[${username}→${String(repoName)}]${String(commits.commit.message)}`; // [KKardd→Nogwari/server]feat: add function
             }
         }
-        return response.data;
     } catch (error) {
         throw new Error(`Failed to fetch commits for repository ${repoName}: ` + error.message);
     }
